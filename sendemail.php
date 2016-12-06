@@ -1,14 +1,11 @@
 <?php
 
-    $to      = "dscodetest@mailinator.com"; 
-$subject = "the subject"; 
-$message = <<<EMAIL 
-HELLO
 
- EMAIL; 
-$headers = "From:test@mailinator.com";
+$message = 'Hilklllllllllllllllllllllll'; 
 
-if(mail($to, $subject, $message, $headers)){ 
+
+if(mail('dscodetest@mailinator.com', 'test@mailinator.com', $message))
+{ 
     echo "Mail Sent"; 
 }else{ 
     echo "***ERROR***"; 
