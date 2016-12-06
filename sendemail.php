@@ -11,8 +11,8 @@ $to = new SendGrid\Email(null, "dscodetest@mailinator.com");
 $content = new SendGrid\Content("text/plain", "Hello, Email!");
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
-$apiKey = getenv('SENDGRID_API_KEY');
-$sg = new \SendGrid($apiKey);
+ $apiKey = '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';
+ $sg = new \SendGrid($apiKey);
 
 $response = $sg->client->mail()->send()->post($mail);
 echo $response->statusCode();
