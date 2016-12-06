@@ -23,14 +23,15 @@ $mymsg=$retrived_msg->body;
 //var_dump($retrived_msg->body);
 	echo "<p bgcolor=\"red\"> Thank you ;)". $mymsg ."</p>";
 
-$to      = 'as_mallem@esi.dz';
-$subject = 'the subject';
-$message = $mymsg ;
-$headers = 'From: salihamallem92@gmail.com' . "\r\n" .
-    'Reply-To: salihamallem92@gmail.com' . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
-
-mail($to, $subject, $message, $headers);	
+ini_set( 'display_errors', 1 );
+    error_reporting( E_ALL );
+    $from = "emailtest@YOURDOMAIN";
+    $to = "salihamallem92@gmail.com";
+    $subject = "PHP Mail Test script";
+    $message = "This is a test to check the PHP Mail functionality";
+    $headers = "From:" . $from;
+    mail($to,$subject,$message, $headers);
+    echo "Test email sent";	
 	
 	
 $ch->basic_ack($retrived_msg->delivery_info['delivery_tag']);
