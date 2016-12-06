@@ -6,7 +6,7 @@ define('AMQP_DEBUG', true);
 use PhpAmqpLib\Connection\AMQPConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 
-if(isset($_POST['submit']))
+if(isset($_POST))
 {
 	//$field_first_name=$_POST['field_first_name'];
 	//$field_birthdate=$_POST['field_birthdate'];
