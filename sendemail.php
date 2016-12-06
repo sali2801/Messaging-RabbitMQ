@@ -1,7 +1,7 @@
 <?php
 // If you are using Composer
 require 'vendor/autoload.php';
-$apiKey = getenv('SENDGRID_API_KEY');
+$apiKey = getenv('Dosomethingtest');
 $sg = new \SendGrid($apiKey);
 ////////////////////////////////////////////////////
 // Create a batch ID #
