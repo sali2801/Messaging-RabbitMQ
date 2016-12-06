@@ -48,5 +48,5 @@ $conn->close();
 
 
  
-header('Location: ' . 'thankYou.php');
+header('Location: thankYou.php');
  ?>
