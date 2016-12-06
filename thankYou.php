@@ -1,5 +1,13 @@
 
 <?php
+if(isset($_POST['submit']))
+{
+	$field_first_name=$_POST['field_first_name'];
+	$field_birthdate=$_POST['field_birthdate'];
+	$mail=$_POST['mail'];
+	$field_mobile=$_POST['field_mobile'];
+	$pass=$_POST['pass'];
+}
 require('vendor/autoload.php');
 define('AMQP_DEBUG', true);
 use PhpAmqpLib\Connection\AMQPConnection;
