@@ -3,9 +3,10 @@
  <?php
 // If you are using Composer
 require 'vendor/autoload.php';
-
+Dotenv::load(__DIR__);
 // If you are not using Composer (recommended)
 // require("path/to/sendgrid-php/sendgrid-php.php");
+$sendgrid_apikey = getenv('dosomethingtest');
 
 $from = new SendGrid\Email(null, "as_mallem@esi.dz");
 $subject = "Hello World from the SendGrid PHP Library!";
