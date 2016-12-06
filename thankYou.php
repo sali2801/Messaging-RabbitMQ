@@ -23,7 +23,20 @@ $mymsg=$retrived_msg->body;
 //var_dump($retrived_msg->body);
 	echo "<p bgcolor=\"red\"> Thank you ;)". $mymsg ."</p>";
 
+$to      = 'as_mallem@esi.dz';
+$subject = 'the subject';
+$message = $mymsg ;
+$headers = 'From: salihamallem92@gmail.com' . "\r\n" .
+    'Reply-To: salihamallem92@gmail.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+mail($to, $subject, $message, $headers);	
+	
+	
 $ch->basic_ack($retrived_msg->delivery_info['delivery_tag']);
+
+
+
 
 $ch->close();
 $conn->close();
