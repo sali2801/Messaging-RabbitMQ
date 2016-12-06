@@ -1,10 +1,12 @@
 <?php
-$to      = 'nobody@example.com';
-$subject = 'the subject';
-$message = 'hello';
-$headers = 'From: webmaster@example.com' . "\r\n" .
-    'Reply-To: webmaster@example.com' . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
 
-mail($to, $subject, $message, $headers);
-?> 
+    $to = "salihamallem92@gmail.com";
+    $subject = "PHP Mail Test script";
+	$message = "This is a test to check the PHP Mail functionality";
+    $headers = "From:";
+    mail($to,$subject,$message, $headers);
+    echo "Test email sent";	
+
+ 
+  
+ ?>
