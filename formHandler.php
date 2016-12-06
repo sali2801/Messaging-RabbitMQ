@@ -1,6 +1,16 @@
 
 <?php
 require('vendor/autoload.php');
+
+if(isset($_POST['submit']))
+{
+	$field_first_name=$_POST['field_first_name'];
+	$field_birthdate=$_POST['field_birthdate'];
+	$mail=$_POST['mail'];
+	$field_mobile=$_POST['field_mobile'];
+	$pass=$_POST['pass'];
+	
+	
 define('AMQP_DEBUG', true);
 use PhpAmqpLib\Connection\AMQPConnection;
 use PhpAmqpLib\Message\AMQPMessage;
@@ -14,14 +24,13 @@ $ch->queue_declare($queue, false, true, false, false);
 $ch->exchange_declare($exchange, 'direct', true, true, false);
 $ch->queue_bind($queue, $exchange);
 
-$msg_body = 'the hellllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllo';
+$msg_body = $field_first_name." " .$field_birthdate."".$mail." " .$field_mobile." ".$pass;
 $msg = new AMQPMessage($msg_body, array('content_type' => 'text/plain', 'delivery_mode' => 2));
 $ch->basic_publish($msg, $exchange);
 
 $retrived_msg = $ch->basic_get($queue);
 $mymsg=$retrived_msg->body;
-//var_dump($retrived_msg->body);
-	echo "<p bgcolor=\"red\"> Thank you ;)". $mymsg ."</p>";
+echo "<p bgcolor=\"red\"> Thank you ;)". $mymsg ."</p>";
 
 
 	
@@ -33,6 +42,11 @@ $ch->basic_ack($retrived_msg->delivery_info['delivery_tag']);
 
 $ch->close();
 $conn->close();
+	
+}
+
+
+
  
   
  ?>
