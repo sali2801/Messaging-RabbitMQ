@@ -8,9 +8,10 @@ if(isset($_POST))
 	$field_mobile=$_POST['field_mobile'];
 	$pass=$_POST['pass'];
 
-	echo $mail;
+	
 
 }
+echo $mail;
 else
 {
 	echo 'hhhhhhhhhhhhhhhhhhhi';
