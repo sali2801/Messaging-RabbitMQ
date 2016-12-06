@@ -1,6 +1,6 @@
 <?php
 
-    $to = "salihamallem92@gmail.com";
+    $to = "salihaleadersoft@hotmail.com";
     $subject = "PHP Mail Test script";
 	$message = "This is a test to check the PHP Mail functionality";
     $headers = "From:";
