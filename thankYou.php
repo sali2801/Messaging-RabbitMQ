@@ -7,7 +7,7 @@ if(isset($_POST['submit']))
 	$mail=$_POST['mail'];
 	$field_mobile=$_POST['field_mobile'];
 	$pass=$_POST['pass'];
-}
+
 require('vendor/autoload.php');
 define('AMQP_DEBUG', true);
 use PhpAmqpLib\Connection\AMQPConnection;
@@ -41,6 +41,6 @@ $ch->basic_ack($retrived_msg->delivery_info['delivery_tag']);
 
 $ch->close();
 $conn->close();
- 
+}
   
  ?>
