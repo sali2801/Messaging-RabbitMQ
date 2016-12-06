@@ -42,11 +42,11 @@ $ch->basic_ack($retrived_msg->delivery_info['delivery_tag']);
 
 $ch->close();
 $conn->close();
-	
+	header('Location: thankYou.php');
+
 }
 
 
 
  
-header('Location: thankYou.php');
  ?>
