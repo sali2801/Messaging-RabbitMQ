@@ -14,13 +14,14 @@ $ch->queue_declare($queue, false, true, false, false);
 $ch->exchange_declare($exchange, 'direct', true, true, false);
 $ch->queue_bind($queue, $exchange);
 
-$msg_body = 'the body';
+$msg_body = 'the hellllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllo';
 $msg = new AMQPMessage($msg_body, array('content_type' => 'text/plain', 'delivery_mode' => 2));
 $ch->basic_publish($msg, $exchange);
 
 $retrived_msg = $ch->basic_get($queue);
+$mymsg=$retrived_msg->body;
 //var_dump($retrived_msg->body);
-	echo "<p bgcolor=\"red\"> Thank you ;)". $retrived_msg->body ."</p>";
+	echo "<p bgcolor=\"red\"> Thank you ;)". $mymsg ."</p>";
 
 $ch->basic_ack($retrived_msg->delivery_info['delivery_tag']);
 
