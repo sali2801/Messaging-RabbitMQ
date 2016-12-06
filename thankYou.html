@@ -1,39 +1,18 @@
-<html>
- <head>
-  <title>Thank you</title>
- </head>
- <body>
-<?php
-require('vendor/autoload.php');
-define('AMQP_DEBUG', true);
-use PhpAmqpLib\Connection\AMQPConnection;
-use PhpAmqpLib\Message\AMQPMessage;
-$url = parse_url(getenv('CLOUDAMQP_URL'));
-$conn = new AMQPConnection($url['host'], 5672, $url['user'], $url['pass'], substr($url['path'], 1));
-$ch = $conn->channel();
+<!DOCTYPE HTML>
 
-$exchange = 'amq.direct';
-$queue = 'basic_get_queue';
-$ch->queue_declare($queue, false, true, false, false);
-$ch->exchange_declare($exchange, 'direct', true, true, false);
-$ch->queue_bind($queue, $exchange);
+<html> 
 
-$msg_body = 'the body';
-$msg = new AMQPMessage($msg_body, array('content_type' => 'text/plain', 'delivery_mode' => 2));
-$ch->basic_publish($msg, $exchange);
+<head> 
 
-$retrived_msg = $ch->basic_get($queue);
-var_dump($retrived_msg->body);
-	echo "<p bgcolor=\"red\"> Thank you ;)". $retrived_msg->body ."</p>";
+<link rel="stylesheet" type="text/css" href="style.css">
 
-$ch->basic_ack($retrived_msg->delivery_info['delivery_tag']);
+</head> 
 
-$ch->close();
-$conn->close();
- 
-  
- ?>
- 
- 
- </body>
+<body>
+
+
+<p> Thank you ;) </p>
+
+</body>
 </html>
+
