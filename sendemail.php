@@ -1,20 +1,17 @@
 <?php
 
-    $to = "dscodetest@mailinator.com";
-    $subject = "PHP Mail Test script";
-	$message = "This is a test to check the PHP Mail functionality";
-    $headers = "From:";
-    if (mail($to,$subject,$message, $headers))
-	{
-		    echo "Test email sent";	
+    $to      = 'dscodetest@mailinator.com'; 
+$subject = 'the subject'; 
+$message = 'hello'; 
+$headers = 'From: test@mailinator.com' . "\r\n" . 
+           'Reply-To: test@mailinator.com' . "\r\n" . 
+           'X-Mailer: PHP/' . phpversion(); 
 
-	}
-	else
-	{
-		    echo "ERROR";	
-
-	}
-
+if(mail($to, $subject, $message, $headers)){ 
+    echo "Mail Sent"; 
+}else{ 
+    echo "***ERROR***"; 
+} 
  
   
  ?>
