@@ -1,6 +1,5 @@
 
 <?php
-require('vendor/autoload.php');
 
 if(isset($_POST['submit']))
 {
@@ -10,7 +9,7 @@ if(isset($_POST['submit']))
 	$field_mobile=$_POST['field_mobile'];
 	$pass=$_POST['pass'];
 	
-	
+require('vendor/autoload.php');
 define('AMQP_DEBUG', true);
 use PhpAmqpLib\Connection\AMQPConnection;
 use PhpAmqpLib\Message\AMQPMessage;
