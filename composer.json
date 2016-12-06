@@ -1,6 +1,9 @@
 {
   "require": {
     "videlalvaro/php-amqplib": "2.2.*",
+	"sendgrid/sendgrid": "~5.0.9",
     "ext-bcmath": "*"
   }
+  
+  
 }

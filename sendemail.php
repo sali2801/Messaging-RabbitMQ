@@ -1,20 +1,25 @@
 
 
  <?php
-         // using SendGrid's PHP Library
-// https://github.com/sendgrid/sendgrid-php
+// If you are using Composer
 require 'vendor/autoload.php';
-$sendgrid = new SendGrid("SENDGRID_APIKEY");
-$email    = new SendGrid\Email();
 
-$email->addTo("dscodetest@mailinator.com  ")
-      ->setFrom("as_mallem@esi.dz")
-      ->setSubject("Sending with SendGrid is Fun")
-      ->setHtml("and easy to do anywhere, even with PHP");
+// If you are not using Composer (recommended)
+// require("path/to/sendgrid-php/sendgrid-php.php");
 
-$sendgrid->send($email);
+$from = new SendGrid\Email(null, "as_mallem@esi.dz");
+$subject = "Hello World from the SendGrid PHP Library!";
+$to = new SendGrid\Email(null, "salihamallem92@gmail.com");
+$content = new SendGrid\Content("text/plain", "Hello, Email!");
+$mail = new SendGrid\Mail($from, $subject, $to, $content);
 
-    echo $email;	
+$apiKey = getenv('SENDGRID_API_KEY');
+$sg = new \SendGrid($apiKey);
+
+$response = $sg->client->mail()->send()->post($mail);
+echo $response->statusCode();
+echo $response->headers();
+echo $response->body();	
 
 
       ?>
