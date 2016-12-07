@@ -49,16 +49,12 @@
 <nav class="navigation -white -floating">
   <a class="navigation__logo" href="/"><span>DoSomething.org</span></a>
   <div class="navigation__menu">
-   
-
-
   </div>
 </nav>
   
 <header role="banner" class="header ">
   <div class="wrapper">
-    
-      </div>
+  </div>
 </header>
 
   <main role="main" class="container -padded">
