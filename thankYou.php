@@ -50,48 +50,15 @@ Before you can be given access to the website we need to verify your registratio
   
 <nav class="navigation -white -floating">
   <a class="navigation__logo" href="/"><span>DoSomething.org</span></a>
-  <a class="navigation__toggle js-navigation-toggle" href="#"><span>Show Menu</span></a>
   <div class="navigation__menu">
-    <ul class="navigation__primary">
-      <li>
-        <a href="/campaigns">
-          <strong class="navigation__title">Explore Campaigns</strong>
-          <span class="navigation__subtitle">Any cause, anytime, anywhere.</span>
-        </a>
-      </li>
+   
 
-      <li>
-        <a href="/us/about/who-we-are">
-          <strong class="navigation__title">What Is DoSomething.org?</strong>
-          <span class="navigation__subtitle">Young people + social change.</span>
-        </a>
-      </li>
-    </ul>
 
-    <ul class="navigation__secondary">
-      <li>
-        <form action="/us/search/apachesolr_search" method="post" id="search-block-form" accept-charset="UTF-8"><div>
-<div class="form-item form-type-textfield form-item-search-block-form">
- <input type="search" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="text-field -search">
-</div>
-<input type="hidden" name="form_build_id" value="form-FehDhAVWXNtYqhVRhjza8nqcFy5S7dL0CNUf8BrCxaA">
-<input type="hidden" name="form_token" value="ocJ5XMQr-YjJeNQE4y33P9uMCp3AgxQmUUa0uEtzhUk">
-<input type="hidden" name="form_id" value="search_block_form">
-</div></form>      </li>
-              <li class="navigation__dropdown">
-          <a href="#" class="navigation__dropdown-toggle">mimi</a>
-          <ul>
-            <li><a href="/us/user/4362809">My Account</a></li>
-            <li><a href="/us/user/logout" class="secondary-nav-item" id="link--logout">Log Out</a></li>
-          </ul>
-        </li>
-          </ul>
   </div>
 </nav>
   
 <header role="banner" class="header ">
   <div class="wrapper">
-    <h1 class="header__title">Edit Profile</h1>
     
       </div>
 </header>
