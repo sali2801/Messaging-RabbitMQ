@@ -17,14 +17,14 @@ echo ' [*] Waiting for messages. To exit press CTRL+C', "\n";
 $callback = function($msg) {
   //echo " [x] Received ", $msg->body, "\n";
   echo " * Message received.......................................................................", "\n";
- // $retrived_msg = json_decode($msg->body, true);
+  $retrived_msg = json_decode($msg->body, true);
 
-   // $field_first_name=$retrived_msg['field_first_name'];
-	//$field_birthdate=$retrived_msg['field_birthdate'];
-	//$mail=$retrived_msg['mail'];
-//	$field_mobile=$retrived_msg['field_mobile'];
-//	$pass=$retrived_msg['pass']; 
-      //echo $field_first_name. " jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj\n";
+  $field_first_name=$retrived_msg['field_first_name'];
+  $field_birthdate=$retrived_msg['field_birthdate'];
+  $mail=$retrived_msg['mail'];
+  $field_mobile=$retrived_msg['field_mobile'];
+  $pass=$retrived_msg['pass']; 
+  echo $field_first_name. " jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj\n";
 
 // If you are not using Composer (recommended)
 // require("path/to/sendgrid-php/sendgrid-php.php");
