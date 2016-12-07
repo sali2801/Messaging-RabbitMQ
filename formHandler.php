@@ -23,10 +23,10 @@ $queue = 'basic_get_queue';
 $ch->queue_declare($queue, false, true, false, false);
 $ch->exchange_declare($exchange, 'direct', true, true, false);
 $ch->queue_bind($queue, $exchange);
-$msg_body = json_encode($_POST);;
+$msg_body = json_encode($_POST);
 
 //$msg_body = "hello Mr. ".$mail.$field_first_name.$field_birthdate.$field_mobile.$pass;
-$msg = new AMQPMessage($msg_body, 'delivery_mode' => 2));
+$msg = new AMQPMessage($msg_body,'delivery_mode' => 2));
 $ch->basic_publish($msg, $exchange);
 
 //$retrived_msg = $ch->basic_get($queue);
