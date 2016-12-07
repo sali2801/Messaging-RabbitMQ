@@ -46,7 +46,7 @@ function validateForm()
 			   document.getElementById('birth_validation').innerHTML="";
 			}
 			//
-			if (email==null || email=="" || !(validateEmail(email)))
+			if (email==null || email=="" || validateEmail(email)==false)
 			{
 			    document.getElementById('email_validation').innerHTML="this is invalid email";
                 return false;
