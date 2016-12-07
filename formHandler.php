@@ -23,8 +23,9 @@ $queue = 'basic_get_queue';
 $ch->queue_declare($queue, false, true, false, false);
 $ch->exchange_declare($exchange, 'direct', true, true, false);
 $ch->queue_bind($queue, $exchange);
+$msg_body = array('field_first_name' => $field_first_name, 'field_birthdate' => $field_birthdate, 'mail'=> $mail );
 
-$msg_body = "hello Mr. ".$mail.$field_first_name.$field_birthdate.$field_mobile.$pass;
+//$msg_body = "hello Mr. ".$mail.$field_first_name.$field_birthdate.$field_mobile.$pass;
 $msg = new AMQPMessage($msg_body, array('content_type' => 'text/plain', 'delivery_mode' => 2));
 $ch->basic_publish($msg, $exchange);
 
