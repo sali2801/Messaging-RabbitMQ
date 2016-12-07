@@ -34,7 +34,7 @@ $subject = "Hello World from beautiful world DOsomething!";
 $to = new SendGrid\Email(null, "dscodetest@mailinator.com");
 //$mailBody = $mail.$field_first_name.$field_birthdate.$field_mobile.$pass;
 
-$content = new SendGrid\Content("text/plain", "hhhhhhhhhhhhhh");
+$content = new SendGrid\Content("text/plain", $field_first_name);
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
 $apiKey = getenv('SENDGRID_API_KEY');
