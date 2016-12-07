@@ -1,4 +1,3 @@
-
 <?php
 	
 require('vendor/autoload.php');
@@ -29,10 +28,6 @@ $msg = new AMQPMessage($data, "text/plain", array('delivery_mode' => 2));
 $ch->basic_publish($msg, $exchange); 
 $ch->close();
 $conn->close();
-header('Location: thankYou.php');
+header('Location: thankYou.html');
 }
-
-
-
- 
- 
+?>

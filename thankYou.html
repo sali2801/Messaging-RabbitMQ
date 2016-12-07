@@ -1,47 +1,38 @@
-<!DOCTYPE HTML>
-
-<html> 
+<!DOCTYPE html>
+ <html lang="en"> 
 
 <head> 
-
-<link rel="stylesheet" type="text/css" href="style.css">
-
-</head> 
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Thank You|DoSomething.org</title>
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
 
 <body>
 
+<div class="chrome">
+<div class="wrapper">
 
-<?php
-require('vendor/autoload.php');
-define('AMQP_DEBUG', true);
-use PhpAmqpLib\Connection\AMQPConnection;
-use PhpAmqpLib\Message\AMQPMessage;
-$url = parse_url(getenv('CLOUDAMQP_URL'));
-$conn = new AMQPConnection($url['host'], 5672, $url['user'], $url['pass'], substr($url['path'], 1));
-$ch = $conn->channel();
-
-$exchange = 'amq.direct';
-$queue = 'basic_get_queue';
-$ch->queue_declare($queue, false, true, false, false);
-$ch->exchange_declare($exchange, 'direct', true, true, false);
-$ch->queue_bind($queue, $exchange);
-
-$msg_body = 'the body';
-$msg = new AMQPMessage($msg_body, array('content_type' => 'text/plain', 'delivery_mode' => 2));
-$ch->basic_publish($msg, $exchange);
-
-$retrived_msg = $ch->basic_get($queue);
-//var_dump($retrived_msg->body);
-	echo "<p bgcolor=\"red\"> Thank you ;)". $retrived_msg->body ."</p>";
-
-$ch->basic_ack($retrived_msg->delivery_info['delivery_tag']);
-
-$ch->close();
-$conn->close();
- 
-  
- ?>
-
+<!-- *************************************************************************** -->
+<nav class="navigation -white -floating">
+  <a class="navigation__logo" href="/"><span>DoSomething.org</span></a>
+</nav>
+<!-- *************************************************************************** -->
+<header class="header "> </header>
+<!-- *************************************************************************** -->
+  <main class="container -padded">
+    <div class="wrapper">
+     <div class="container__block">
+	  <h2 class="auth-heading">THANK YOU FOR YOUR REGISTRATION !</h2>
+      <p> A confirmation email will be sent to you shortly ... :)</p>
+      </div>
+      </div>
+    </div>
+  </main>
+<!-- *************************************************************************** -->
+</div>
+</div>
+</div>
 </body>
 </html>
-
