@@ -38,7 +38,7 @@ function validateForm()
 			   document.getElementById('birth_validation').innerHTML="";
 			}
 			//
-			if (email==null || email=="" || !(validateEmail(birthdate)))
+			if (email==null || email=="" || validateEmail(birthdate)==false)
 			{
 			    document.getElementById('email_validation').innerHTML="this is invalid email";
                 return false;
