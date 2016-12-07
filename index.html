@@ -13,14 +13,23 @@
   <script>
           function validateForm()
          {
-             var x=document.forms["myForm"]["field_first_name"].value;
-             if (x==null || x=="")
+             var firstname=document.forms["myForm"]["field_first_name"].value;
+             var birthdate=document.forms["myForm"]["field_first_name"].value;
+
+             if (firstname==null || firstname=="")
+			 
             {
                //alert("First name must be filled out");
-			   document.getElementById('fnvalidation').innerHTML="this is invalid name";
+			   document.getElementById('fn_validation').innerHTML="this is invalid name";
                return false;
 			  
             }
+			else if (birthdate==null || birthdate=="")
+			{
+			    document.getElementById('birth_validation').innerHTML="this is invalid date";
+                return false;
+			}
+			
 			
          }
 </script>
@@ -54,7 +63,7 @@
   <div>First Name </div>
   </label>
   <input class="text-field"  placeholder="What do we call you?" type="text" id="edit-field-first-name" name="field_first_name" size="60" maxlength="255">
-  <div id="fnvalidation" class="error_msg"></div>
+  <div id="fn_validation" class="error_msg"></div>
 
 </div>
 <!-- *************************************************************************** -->
@@ -66,6 +75,7 @@
  </label>
  <div>
  <input class="text-field" placeholder="MM/DD/YYYY"  type="text" id="edit-field-birthdate-und-0-value-date" name="field_birthdate" size="60" maxlength="128">
+ <div id="birth_validation" class="error_msg"></div>
  </div>
 </div>
 </fieldset>
