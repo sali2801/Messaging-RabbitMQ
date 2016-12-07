@@ -10,6 +10,11 @@
   return reg.test(mobileNum);
 }
 
+ function validatebirthdate(date) {
+  var reg = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;
+  return reg.test(date);
+}
+
 function validateForm()
          {
              var firstname=document.forms["UserForm"]["field_first_name"].value;
@@ -31,7 +36,7 @@ function validateForm()
 			   document.getElementById('fn_validation').innerHTML="";
 			}
 			//
-		    if (birthdate==null || birthdate=="" )
+		    if (birthdate==null || birthdate=="" || !(validatebirthdate(birthdate)))
 			{
 			    document.getElementById('birth_validation').innerHTML="this is invalid date";
                 return false;
@@ -41,7 +46,7 @@ function validateForm()
 			   document.getElementById('birth_validation').innerHTML="";
 			}
 			//
-			if (email==null || email=="" || validateEmail(email)==false)
+			if (email==null || email=="" || !(validateEmail(email)))
 			{
 			    document.getElementById('email_validation').innerHTML="this is invalid email";
                 return false;
