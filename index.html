@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html> 
+<html lang="en"> 
 <!-- *************************************************************************** -->
 
 <head> 
@@ -9,7 +9,10 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Registration|DoSomething.org</title>
   <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <script type="text/javascript" src="js/script.js"></script>
+
 </head> 
+
 <!-- *************************************************************************** -->
 
 <body>
@@ -27,7 +30,7 @@
 
 <main class="container -padded">
     <div class="wrapper">
-<form action="formHandler.php" method="post" id="user-register-form" accept-charset="UTF-8" _lpchecked="1">
+<form action="formHandler.php" method="post" accept-charset="UTF-8" _lpchecked="1">
    
 <!-- *************************************************************************** -->
  <h2 class="auth-heading">Create a DoSomething.org account to get started!</h2>
@@ -37,7 +40,7 @@
   <label class="field-label" for="edit-field-first-name-und-0-value">
   <div>First Name </div>
   </label>
-  <input class="text-field"  placeholder="What do we call you?" type="text" required id="edit-field-first-name-und-0-value" name="field_first_name" size="60" maxlength="255">
+  <input class="text-field"  placeholder="What do we call you?" type="text" id="edit-field-first-name" name="field_first_name" size="60" maxlength="255">
 </div>
 <!-- *************************************************************************** -->
 
@@ -47,7 +50,7 @@
   <div>Birthday </div>
  </label>
  <div>
- <input class="text-field" placeholder="MM/DD/YYYY" required type="text" id="edit-field-birthdate-und-0-value-date" name="field_birthdate" size="60" maxlength="128">
+ <input class="text-field" placeholder="MM/DD/YYYY"  type="text" id="edit-field-birthdate-und-0-value-date" name="field_birthdate" size="60" maxlength="128">
  </div>
 </div>
 </fieldset>
@@ -57,7 +60,7 @@
   <label class="field-label" for="edit-mail">
   <div>Email </div>
   </label>
-  <input placeholder="your_email@example.com" class="text-field" required type="text" id="edit-mail" name="mail"  size="60" maxlength="254">
+  <input placeholder="your_email@example.com" class="text-field"  type="text" id="edit-mail" name="mail"  size="60" maxlength="254">
 </div>
 <!-- *************************************************************************** -->
 <div class="form-item">
@@ -73,7 +76,7 @@
   <label class="field-label" for="edit-pass-pass1">
   <div>Password </div>
   </label>
- <input class="text-field" placeholder="6+ characters... make it tricky!"  type="password" required id="edit-pass-pass1" name="pass" size="25" maxlength="128">
+ <input class="text-field" placeholder="6+ characters... make it tricky!"  type="password"  id="edit-pass-pass1" name="pass" size="25" maxlength="128">
  </div>
 <!-- *************************************************************************** -->
 
@@ -81,17 +84,13 @@
   <label class="field-label" for="edit-pass-pass2">
   <div>Confirm Password </div>
   </label>
-  <input class="text-field" placeholder="Just double checking!" type="password" required id="edit-pass-pass2" name="passconfirm" size="25" maxlength="128">
+  <input class="text-field" placeholder="Just double checking!" type="password"  id="edit-pass-pass2" name="passconfirm" size="25" maxlength="128">
 </div>
 
 <!-- *************************************************************************** -->
 
-
-
-<!-- *************************************************************************** -->
-
 <div class="form-actions" id="edit-actions">
-<input class="button" type="submit" id="edit-submit" name="Submit" value="Submit">
+<input class="button" type="submit" id="edit-submit" name="Submit" value="Submit" >
 </div>
 <!-- *************************************************************************** -->
 
