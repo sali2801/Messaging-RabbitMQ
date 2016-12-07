@@ -25,30 +25,8 @@ $queue = 'basic_get_queue';
 $ch->queue_declare($queue, false, true, false, false);
 $ch->exchange_declare($exchange, 'direct', true, true, false);
 $ch->queue_bind($queue, $exchange);
-
-
-//$msg_body = "hello Mr. ".$mail.$field_first_name.$field_birthdate.$field_mobile.$pass;
-//$msg = new AMQPMessage($msg_body,array('content_type' => 'text/plain', 'delivery_mode' => 2));
 $msg = new AMQPMessage($data, "text/plain", array('delivery_mode' => 2));
-
 $ch->basic_publish($msg, $exchange); 
-
-
-//$data = json_encode($_POST);
-//$msg = new AMQPMessage($data, "text/plain", array('delivery_mode' => 2));
-//$channel->basic_publish($msg, '', $queue);
-
-
-
-//$retrived_msg = $ch->basic_get($queue);
-//$mymsg=$retrived_msg->body;
-//echo "<p bgcolor=\"red\"> Thank you ;)". $mymsg ."</p>";
-//$ch->basic_ack($retrived_msg->delivery_info['delivery_tag']);
-
-
-
-
-
 $ch->close();
 $conn->close();
 header('Location: thankYou.php');

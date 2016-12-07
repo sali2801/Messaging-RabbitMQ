@@ -30,7 +30,7 @@ $subject = "Nice! You’re officially a DoSomething.org member!";
 $to = new SendGrid\Email(null, "dscodetest@mailinator.com");
 
 $body = $mail.$field_first_name.$field_birthdate.$field_mobile.$pass;
-$body = "Name: ".$field_first_name."<br>"; 
+$body = "Firstname: ".$field_first_name."<br>"; 
 $body .= "Date of birth: ".$field_birthdate."<br>"; 
 $body .= "Email: ".$mail."<br>"; 
 $body .= "Mobile: ".$field_mobile."<br>"; 

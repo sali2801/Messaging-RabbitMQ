@@ -38,8 +38,6 @@
 <body class="html not-front logged-in no-sidebars page-user page-user- page-user-4362809 page-user-edit i18n-en">
   <div class="chrome">
         
-<!--[if lt IE 8 ]><div class="messages error">You're using an unsupported browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to make sure everything works nicely!</div><![endif]-->
-
 
 <div class="wrapper">
   
