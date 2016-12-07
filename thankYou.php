@@ -1,8 +1,6 @@
 
 <?php
-echo "THANK YOU FOR REGISTERING
-Thank you for registering to the Oriel Alumni website. You should receive a confirmation email shortly with your user name and password reminder.
-Before you can be given access to the website we need to verify your registration, which can take up to 3 working days to process. A notification email will be sent to you once this has been completed.";
+
   
  ?>
 <!DOCTYPE html>
@@ -66,71 +64,11 @@ Before you can be given access to the website we need to verify your registratio
   <main role="main" class="container -padded">
     <div class="wrapper">
       <div class="container__block">
-          <div class="region region-content">
-    
-<form action="/us/user/4362809/edit" method="post" id="user-profile-form" accept-charset="UTF-8"><div><div id="edit-account" class="form-wrapper"><div class="form-item form-type-textfield form-item-mail">
-  <label class="field-label" for="edit-mail">Email <span class="form-required" title="This field is required.">*</span></label>
- <input type="text" id="edit-mail" name="mail" value="salihaleadersoft@hotmail.com" size="60" maxlength="254" class="text-field required">
-</div>
-<div class="form-item form-type-password form-item-current-pass">
-  <label class="field-label" for="edit-current-pass">Current Password </label>
- <input autocomplete="off" type="password" id="edit-current-pass" name="current_pass" size="25" maxlength="128" class="text-field">
-</div>
- <div class="footnote">Enter your current password to change the <em class="placeholder">E-mail address</em> or <em class="placeholder">Password</em>. <a href="/us/user/password" title="Request new password via e-mail.">Request new password</a>.</div> 
-<h4>Change Password</h4><div class="form-item form-type-password-confirm form-item-pass">
- <div class="form-item form-type-password form-item-pass-pass1">
-  <label class="field-label" for="edit-pass-pass1">New Password </label>
- <input class="password-field text-field" type="password" id="edit-pass-pass1" name="pass[pass1]" size="25" maxlength="128">
-</div>
-<div class="form-item form-type-password form-item-pass-pass2">
-  <label class="field-label" for="edit-pass-pass2">Confirm Password </label>
- <input class="password-confirm text-field" type="password" id="edit-pass-pass2" name="pass[pass2]" size="25" maxlength="128">
-</div>
-
-</div>
-</div><input type="hidden" name="form_build_id" value="form-eBIbxp97PNSceGci6nK4siEo9e5HGjET-wCO2wAm69o">
-<input type="hidden" name="form_token" value="29HSvi_xYOFbw9AeaFrJ_Wrm1dQNArgL-GpYm3iITrQ">
-<input type="hidden" name="form_id" value="user_profile_form">
-<div class="field-type-text field-name-field-first-name field-widget-text-textfield form-wrapper" id="edit-field-first-name"><div id="field-first-name-add-more-wrapper"><div class="form-item form-type-textfield form-item-field-first-name-und-0-value">
-  <label class="field-label" for="edit-field-first-name-und-0-value">First Name <span class="form-required" title="This field is required.">*</span></label>
- <input class="text-full text-field required" type="text" id="edit-field-first-name-und-0-value" name="field_first_name[und][0][value]" value="mimi" size="60" maxlength="255">
-</div>
-</div></div><div class="field-type-text field-name-field-last-name field-widget-text-textfield form-wrapper" id="edit-field-last-name"><div id="field-last-name-add-more-wrapper"><div class="form-item form-type-textfield form-item-field-last-name-und-0-value">
-  <label class="field-label" for="edit-field-last-name-und-0-value">Last Name </label>
- <input class="text-full text-field" type="text" id="edit-field-last-name-und-0-value" name="field_last_name[und][0][value]" value="" size="60" maxlength="255">
-</div>
-</div></div><div class="field-type-datetime field-name-field-birthdate field-widget-date-text form-wrapper" id="edit-field-birthdate"><div id="field-birthdate-add-more-wrapper"><fieldset class="form-wrapper"><legend><span class="fieldset-legend">  <span class="form-required" title="This field is required.">*</span></span></legend><div class="fieldset-wrapper"><div class="date-no-float container-inline-date"><div class="form-item form-type-date-text form-item-field-birthdate-und-0-value">
- <div id="edit-field-birthdate-und-0-value" class="date-padding clearfix"><div class="form-item form-type-textfield form-item-field-birthdate-und-0-value-date">
-  <label class="field-label" for="edit-field-birthdate-und-0-value-date"><div class="validation"><div class="validation__label">Birthday </div><div class="validation__message"></div></div></label>
- <div class="date-date"><input class="js-validate text-field" placeholder="MM/DD/YYYY" data-validate="birthday" data-validate-required="" type="text" id="edit-field-birthdate-und-0-value-date" name="field_birthdate[und][0][value][date]" value="10/10/1991" size="60" maxlength="128"></div>
-</div>
-</div>
-</div>
-</div></div></fieldset>
-</div></div><div class="field-type-text field-name-field-mobile field-widget-text-textfield form-wrapper" id="edit-field-mobile"><div id="field-mobile-add-more-wrapper"><div class="form-item form-type-textfield form-item-field-mobile-und-0-value">
-  <label class="field-label" for="edit-field-mobile-und-0-value">Cell # </label>
- <input class="text-full text-field" type="text" id="edit-field-mobile-und-0-value" name="field_mobile[und][0][value]" value="5513213298" size="60" maxlength="255">
-</div>
-</div></div><div class="field-type-addressfield field-name-field-address field-widget-addressfield-standard form-wrapper" id="edit-field-address"><div id="field-address-add-more-wrapper"><div id="addressfield-wrapper"><fieldset id="edit-field-address-und-0-address" class="form-wrapper"><div class="fieldset-wrapper"><div class="street-block"><div class="form-item form-type-textfield form-item-field-address-und-0-thoroughfare">
-  <label class="field-label" for="edit-field-address-und-0-thoroughfare"><div class="validation"><div class="validation__label">Address 1 </div><div class="validation__message"></div></div></label>
- <input class="thoroughfare text-field" x-autocompletetype="address-line1" autocomplete="address-line1" data-validate="address1" type="text" id="edit-field-address-und-0-thoroughfare" name="field_address[und][0][thoroughfare]" value="" size="30" maxlength="128">
-</div>
-<div class="form-item form-type-textfield form-item-field-address-und-0-premise">
-  <label class="field-label" for="edit-field-address-und-0-premise"><div class="validation"><div class="validation__label">Address 2 </div><div class="validation__message"></div></div></label>
- <input class="premise text-field" x-autocompletetype="address-line2" autocomplete="address-line2" data-validate="address2" type="text" id="edit-field-address-und-0-premise" name="field_address[und][0][premise]" value="" size="30" maxlength="128">
-</div></div><div class="addressfield-container-inline locality-block country-US"><div class="form-item form-type-textfield form-item-field-address-und-0-locality">
-  <label class="field-label" for="edit-field-address-und-0-locality"><div class="validation"><div class="validation__label">City </div><div class="validation__message"></div></div></label>
- <input class="locality text-field" x-autocompletetype="locality" autocomplete="locality" data-validate="city" type="text" id="edit-field-address-und-0-locality" name="field_address[und][0][locality]" value="" size="30" maxlength="128">
-</div>
- <div class="form-item form-type-select form-item-field-address-und-0-administrative-area">
-  <label class="field-label" for="edit-field-address-und-0-administrative-area"><div class="validation"><div class="validation__label">State </div><div class="validation__message"></div></div></label>
- <div class="select"><select class="state" x-autocompletetype="region" autocomplete="region" data-validate="state" id="edit-field-address-und-0-administrative-area" name="field_address[und][0][administrative_area]"><option value="" selected="selected">--</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District Of Columbia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option><option value=" ">--</option><option value="PR">Puerto Rico</option></select></div>
-</div>
- <div class="form-item form-type-textfield form-item-field-address-und-0-postal-code">
-  <label class="field-label" for="edit-field-address-und-0-postal-code"><div class="validation"><div class="validation__label">ZIP Code </div><div class="validation__message"></div></div></label>
- <input class="postal-code text-field" x-autocompletetype="postal-code" autocomplete="postal-code" data-validate="zipcode" type="text" id="edit-field-address-und-0-postal-code" name="field_address[und][0][postal_code]" value="" size="10" maxlength="128">
-</div></div></div></fieldset>
-</div></div></div><div class="form-actions form-wrapper" id="edit-actions--2"><input class="button form-submit" type="submit" id="edit-submit" name="op" value="Save"></div></div></form>  </div>
+	  <p> THANK YOU FOR REGISTERING<P>
+<p> Thank you for registering to the Oriel Alumni website. You should receive a confirmation email shortly with your user name and password reminder.
+Before you can be given access to the website we need to verify your registration, which can take up to 3 working days to process. A notification email will be sent to you once this has been completed.
+ </p>
+          </div>
       </div>
     </div>
   </main>
