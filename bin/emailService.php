@@ -24,7 +24,7 @@ $callback = function($msg) {
 	$mail=$retrived_msg['mail'];
 	$field_mobile=$retrived_msg['field_mobile'];
 	$pass=$retrived_msg['pass']; 
-      echo $field_first_name. " jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj\n";
+      //echo $field_first_name. " jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj\n";
 
 // If you are not using Composer (recommended)
 // require("path/to/sendgrid-php/sendgrid-php.php");
@@ -32,9 +32,9 @@ $callback = function($msg) {
 $from = new SendGrid\Email(null, "saliha@dosomething.com");
 $subject = "Hello World from beautiful world DOsomething!";
 $to = new SendGrid\Email(null, "dscodetest@mailinator.com");
-$mailBody = $mail.$field_first_name.$field_birthdate.$field_mobile.$pass;
+//$mailBody = $mail.$field_first_name.$field_birthdate.$field_mobile.$pass;
 
-$content = new SendGrid\Content("text/plain", $mailBody);
+$content = new SendGrid\Content("text/plain", "hhhhhhhhhhhhhh");
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
 $apiKey = getenv('SENDGRID_API_KEY');
