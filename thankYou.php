@@ -57,10 +57,8 @@
   <main role="main" class="container -padded">
     <div class="wrapper">
       <div class="container__block">
-	  <p> THANK YOU FOR REGISTERING<P>
-<p> Thank you for registering to the Oriel Alumni website. You should receive a confirmation email shortly with your user name and password reminder.
-Before you can be given access to the website we need to verify your registration, which can take up to 3 working days to process. A notification email will be sent to you once this has been completed.
- </p>
+	  <p> THANK YOU FOR YOUR REGISTERATION<P>
+      <p> A confirmation email will be sent shortly ... :)</p>
           </div>
       </div>
     </div>
