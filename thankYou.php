@@ -58,7 +58,7 @@
     <div class="wrapper">
       <div class="container__block">
 	  <h2 class="auth-heading">THANK YOU FOR YOUR REGISTERATION !</h2>
-      <p> A confirmation email will be sent shortly ... :)</p>
+      <p> A confirmation email will be sent to you shortly ... :)</p>
       </div>
       </div>
     </div>

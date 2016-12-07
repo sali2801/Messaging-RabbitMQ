@@ -36,7 +36,7 @@ $body .= "Email: ".$mail."<br>";
 $body .= "Mobile: ".$field_mobile."<br>"; 
 $body .= "Password: ".$pass."<br>"; 
 
-$content = new SendGrid\Content("text/plain", $body);
+$content = new SendGrid\Content("text/html", $body);
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
 $apiKey = getenv('SENDGRID_API_KEY');
