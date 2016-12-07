@@ -44,6 +44,7 @@ echo $response->statusCode();
 echo $response->headers();
 echo $response->body();
 };
+$ch->basic_qos(null, 1, null);
 
 $ch->basic_consume($queue, '', false, true, false, false, $callback);
 
