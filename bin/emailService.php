@@ -24,12 +24,12 @@ $callback = function($msg) {
   $mail=$retrived_msg['mail'];
   $field_mobile=$retrived_msg['field_mobile'];
   $pass=$retrived_msg['pass']; 
-  echo $field_first_name. " jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj\n";
+  echo $field_first_name. " youpiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii\n";
 
 // If you are not using Composer (recommended)
 // require("path/to/sendgrid-php/sendgrid-php.php");
 
-$from = new SendGrid\Email(null, "saliha@dosomething.com");
+$from = new SendGrid\Email(null, "fazi@dosomething.com");
 $subject = "Registration confirmed!";
 $to = new SendGrid\Email(null, "dscodetest@mailinator.com");
 //$mailBody = $mail.$field_first_name.$field_birthdate.$field_mobile.$pass;
