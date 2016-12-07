@@ -1,4 +1,9 @@
- function validateForm()
+ function validateEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
+function validateForm()
          {
              var firstname=document.forms["UserForm"]["field_first_name"].value;
              var birthdate=document.forms["UserForm"]["field_birthdate"].value;
@@ -18,7 +23,7 @@
 			{
 			   document.getElementById('fn_validation').innerHTML="";
 			}
-		    if (birthdate==null || birthdate=="")
+		    if (birthdate==null || birthdate=="" )
 			{
 			    document.getElementById('birth_validation').innerHTML="this is invalid date";
                 return false;
@@ -27,7 +32,7 @@
 			{
 			   document.getElementById('birth_validation').innerHTML="";
 			}
-			if (email==null || email=="")
+			if (email==null || email=="" || !(validateEmail(birthdate)))
 			{
 			    document.getElementById('email_validation').innerHTML="this is invalid email";
                 return false;
