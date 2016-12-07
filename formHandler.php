@@ -8,6 +8,8 @@ use PhpAmqpLib\Message\AMQPMessage;
 
 if(isset($_POST))
 {
+	$data = json_encode($_POST);
+
 	$field_first_name=$_POST['field_first_name'];
 	$field_birthdate=$_POST['field_birthdate'];
 	$mail=$_POST['mail'];
