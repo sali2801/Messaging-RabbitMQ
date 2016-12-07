@@ -21,13 +21,24 @@ $ch = $conn->channel();
 $exchange = 'amq.direct';
 $queue = 'basic_get_queue';
 $ch->queue_declare($queue, false, true, false, false);
-$ch->exchange_declare($exchange, 'direct', true, true, false);
+
+
+$data = json_encode($_POST);
+
+$msg = new AMQPMessage($data, array('delivery_mode' => 2));
+$channel->basic_publish($msg, '', $queue);
+
+$ch->close();
+$conn->close();
+header('Location: thankYou.php');
+
+/* $ch->exchange_declare($exchange, 'direct', true, true, false);
 $ch->queue_bind($queue, $exchange);
 $msg_body = json_encode($_POST);
 
 //$msg_body = "hello Mr. ".$mail.$field_first_name.$field_birthdate.$field_mobile.$pass;
 $msg = new AMQPMessage($msg_body,'delivery_mode' => 2));
-$ch->basic_publish($msg, $exchange);
+$ch->basic_publish($msg, $exchange); */
 
 //$retrived_msg = $ch->basic_get($queue);
 //$mymsg=$retrived_msg->body;
@@ -41,14 +52,12 @@ $ch->basic_publish($msg, $exchange);
 
 
 
-$ch->close();
-$conn->close();
 
-header('Location: thankYou.php');
+//header('Location: thankYou.php');
 
 }
 
 
 
  
- ?>
+ 
