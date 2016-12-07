@@ -52,8 +52,8 @@ $channel->basic_publish($msg, '', $queue);
 
 
 
-//$ch->close();
-//$conn->close();
+$ch->close();
+$conn->close();
 header('Location: thankYou.php');
 }
 
