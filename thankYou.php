@@ -70,4 +70,6 @@ Before you can be given access to the website we need to verify your registratio
 
 </div>
   </div>
-</body></html>
+  </div>
+</body>
+</html>
