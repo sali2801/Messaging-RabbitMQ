@@ -27,6 +27,7 @@ function validateForm()
 			{
 			   document.getElementById('fn_validation').innerHTML="";
 			}
+			//
 		    if (birthdate==null || birthdate=="" )
 			{
 			    document.getElementById('birth_validation').innerHTML="this is invalid date";
@@ -36,6 +37,7 @@ function validateForm()
 			{
 			   document.getElementById('birth_validation').innerHTML="";
 			}
+			//
 			if (email==null || email=="" || !(validateEmail(birthdate)))
 			{
 			    document.getElementById('email_validation').innerHTML="this is invalid email";
@@ -45,6 +47,7 @@ function validateForm()
 			{
 			   document.getElementById('email_validation').innerHTML="";
 			}
+			//
 			if (phone==null || phone=="" || !(validateMobileNum(phone)))
 			{
 			    document.getElementById('phone_validation').innerHTML="this is invalid mobile number";
@@ -54,6 +57,7 @@ function validateForm()
 			{
 			   document.getElementById('phone_validation').innerHTML="";
 			}
+			//
 			if (pass==null || pass=="" || pass.length < 6)
 			{
 			    document.getElementById('pass_validation').innerHTML="this is invalid password";
@@ -63,7 +67,8 @@ function validateForm()
 			{
 			   document.getElementById('pass_validation').innerHTML="";
 			}
-			if (pass2==null || pass2=="" pass2!= pass )
+			//
+			if (pass2==null || pass2=="" || pass2!= pass )
 			{
 			    document.getElementById('pass2_validation').innerHTML="this is invalid password";
                 return false;
