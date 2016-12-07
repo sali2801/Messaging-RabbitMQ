@@ -13,21 +13,68 @@
   <script>
           function validateForm()
          {
-             var firstname=document.forms["myForm"]["field_first_name"].value;
-             var birthdate=document.forms["myForm"]["field_birthdate"].value;
+             var firstname=document.forms["UserForm"]["field_first_name"].value;
+             var birthdate=document.forms["UserForm"]["field_birthdate"].value;
+             var email=document.forms["UserForm"]["mail"].value;
+             var phone=document.forms["UserForm"]["field_mobile"].value;
+			 var pass=document.forms["UserForm"]["pass"].value;
+			 var pass2=document.forms["UserForm"]["passconfirm"].value;
 
              if (firstname==null || firstname=="")
 			 
             {
-               //alert("First name must be filled out");
 			   document.getElementById('fn_validation').innerHTML="this is invalid name";
                return false;
 			  
             }
+			else
+			{
+			   document.getElementById('fn_validation').innerHTML="";
+			}
 		    if (birthdate==null || birthdate=="")
 			{
 			    document.getElementById('birth_validation').innerHTML="this is invalid date";
                 return false;
+			}
+			else
+			{
+			   document.getElementById('birth_validation').innerHTML="";
+			}
+			if (email==null || email=="")
+			{
+			    document.getElementById('email_validation').innerHTML="this is invalid email";
+                return false;
+			}
+			else
+			{
+			   document.getElementById('email_validation').innerHTML="";
+			}
+			if (phone==null || phone=="")
+			{
+			    document.getElementById('phone_validation').innerHTML="this is invalid mobile number";
+                return false;
+			}
+			else
+			{
+			   document.getElementById('phone_validation').innerHTML="";
+			}
+			if (pass==null || pass=="")
+			{
+			    document.getElementById('pass_validation').innerHTML="this is invalid password";
+                return false;
+			}
+			else
+			{
+			   document.getElementById('pass_validation').innerHTML="";
+			}
+			if (pass2==null || pass2=="")
+			{
+			    document.getElementById('pass2_validation').innerHTML="this is invalid password";
+                return false;
+			}
+			else
+			{
+			   document.getElementById('pass2_validation').innerHTML="";
 			}
 			
 			
@@ -52,7 +99,7 @@
 
 <main class="container -padded">
     <div class="wrapper">
-<form name="myForm" onsubmit="return validateForm()" action="formHandler.php" method="post" accept-charset="UTF-8" _lpchecked="1">
+<form name="UserForm" onsubmit="return validateForm()" action="formHandler.php" method="post" accept-charset="UTF-8" _lpchecked="1">
    
 <!-- *************************************************************************** -->
  <h2 class="auth-heading">Create a DoSomething.org account to get started!</h2>
@@ -86,6 +133,7 @@
   <div>Email </div>
   </label>
   <input placeholder="your_email@example.com" class="text-field"  type="text" id="edit-mail" name="mail"  size="60" maxlength="254">
+  <div id="email_validation" class="error_msg"></div>
 </div>
 <!-- *************************************************************************** -->
 <div class="form-item">
@@ -93,6 +141,8 @@
    <div>Cell Number <em>(optional)</em>  </div>
   </label>
  <input class="text-field" placeholder="(555) 555-5555"  type="text" id="edit-field-mobile-und-0-value" name="field_mobile" size="60" maxlength="255">
+ <div id="phone_validation" class="error_msg"></div>
+
 </div>
 
 
@@ -102,6 +152,7 @@
   <div>Password </div>
   </label>
  <input class="text-field" placeholder="6+ characters... make it tricky!"  type="password"  id="edit-pass-pass1" name="pass" size="25" maxlength="128">
+ <div id="pass_validation" class="error_msg"></div>
  </div>
 <!-- *************************************************************************** -->
 
@@ -110,6 +161,7 @@
   <div>Confirm Password </div>
   </label>
   <input class="text-field" placeholder="Just double checking!" type="password"  id="edit-pass-pass2" name="passconfirm" size="25" maxlength="128">
+  <div id="pass2_validation" class="error_msg"></div>
 </div>
 
 <!-- *************************************************************************** -->
