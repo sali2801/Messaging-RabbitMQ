@@ -15,15 +15,21 @@ $ch->queue_declare($queue, false, true, false, false);
 echo ' [*] Waiting for messages. To exit press CTRL+C', "\n";
 
 $callback = function($msg) {
-  echo " [x] Received ", $msg->body, "\n";
-  
+  //echo " [x] Received ", $msg->body, "\n";
+  $retrived_msg = $msg->body;
+  $nothing='';
+  foreach($retrived_msg as $key => $value )
+  {
+	  echo " [x] Received ", $value, "\n";
+	  $nothing = $value;
+  }
 // If you are not using Composer (recommended)
 // require("path/to/sendgrid-php/sendgrid-php.php");
 
 $from = new SendGrid\Email(null, "saliha@dosomething.com");
 $subject = "Hello World from beautiful world DOsomething!";
 $to = new SendGrid\Email(null, "dscodetest@mailinator.com");
-$content = new SendGrid\Content("text/plain", $msg->body);
+$content = new SendGrid\Content("text/plain", $nothing);
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
 $apiKey = getenv('SENDGRID_API_KEY');
