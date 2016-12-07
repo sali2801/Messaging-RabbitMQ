@@ -16,8 +16,8 @@
              var x=document.forms["myForm"]["field_first_name"].value;
              if (x==null || x=="")
             {
-               alert("First name must be filled out");
-			   //document.getElementById('fnvalidation').innerHTML="this is invalid name";
+               //alert("First name must be filled out");
+			   document.getElementById('fnvalidation').innerHTML="this is invalid name";
                return false;
 			  
             }
@@ -54,7 +54,7 @@
   <div>First Name </div>
   </label>
   <input class="text-field"  placeholder="What do we call you?" type="text" id="edit-field-first-name" name="field_first_name" size="60" maxlength="255">
-  <div name="fnvalidation"></div>
+  <div id="fnvalidation" class="validation__message"></div>
 
 </div>
 <!-- *************************************************************************** -->
