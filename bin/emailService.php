@@ -16,20 +16,24 @@ echo ' [*] Waiting for messages. To exit press CTRL+C', "\n";
 
 $callback = function($msg) {
   //echo " [x] Received ", $msg->body, "\n";
-  $retrived_msg = $msg->body;
-  $nothing='';
-  foreach($retrived_msg as $key => $value )
-  {
-	  echo " [x] Received ", $value, "\n";
-	  $nothing = $value;
-  }
+  echo " * Message received", "\n";
+  $retrived_msg = json_decode($msg->body, true);
+
+    $field_first_name=$retrived_msg['field_first_name'];
+	$field_birthdate=$retrived_msg['field_birthdate'];
+	$mail=$retrived_msg['mail'];
+	$field_mobile=$retrived_msg['field_mobile'];
+	$pass=$retrived_msg['pass']; 
+  
 // If you are not using Composer (recommended)
 // require("path/to/sendgrid-php/sendgrid-php.php");
 
 $from = new SendGrid\Email(null, "saliha@dosomething.com");
 $subject = "Hello World from beautiful world DOsomething!";
 $to = new SendGrid\Email(null, "dscodetest@mailinator.com");
-$content = new SendGrid\Content("text/plain", $nothing);
+$mailBody = $mail.$field_first_name.$field_birthdate.$field_mobile.$pass;
+
+$content = new SendGrid\Content("text/plain", $mailBody);
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
 $apiKey = getenv('SENDGRID_API_KEY');
