@@ -11,12 +11,12 @@ $url = parse_url(getenv('CLOUDAMQP_URL'));
 $conn = new AMQPConnection($url['host'], 5672, $url['user'], $url['pass'], substr($url['path'], 1));
 $ch = $conn->channel();
 $queue = 'basic_get_queue';
-$ch->queue_declare($queue, false, true, false, false);
+$ch->queue_declare($queue, false, false, false, false);
 echo ' [*] Waiting for messages. To exit press CTRL+C', "\n";
 
 $callback = function($msg) {
   //echo " [x] Received ", $msg->body, "\n";
-  echo " * Message received", "\n";
+  echo " * Message received..................................................................................", "\n";
   $retrived_msg = json_decode($msg->body, true);
 
     $field_first_name=$retrived_msg['field_first_name'];
@@ -47,7 +47,8 @@ echo $response->body();
 };
 $ch->basic_qos(null, 1, null);
 
-$ch->basic_consume($queue, '', false, true, false, false, $callback);
+//$ch->basic_consume($queue, '', false, true, false, false, $callback);
+$ch->basic_consume($queue, '', false, false, false, false, $callback);
 
 while(count($ch->callbacks)) {
     $ch->wait();

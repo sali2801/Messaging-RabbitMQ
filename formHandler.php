@@ -28,8 +28,8 @@ $data = json_encode($_POST);
 $msg = new AMQPMessage($data, array('delivery_mode' => 2));
 $channel->basic_publish($msg, '', $queue);
 
-$ch->close();
-$conn->close();
+//$ch->close();
+//$conn->close();
 header('Location: thankYou.php');
 
 /* $ch->exchange_declare($exchange, 'direct', true, true, false);
