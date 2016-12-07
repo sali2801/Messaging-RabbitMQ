@@ -25,12 +25,12 @@ $ch->queue_declare($queue, false, true, false, false);
 
 $data = json_encode($_POST);
 
-$msg = new AMQPMessage($data, array('delivery_mode' => 2));
+$msg = new AMQPMessage($data, "text/plain", array('delivery_mode' => 2));
 $channel->basic_publish($msg, '', $queue);
 
 //$ch->close();
 //$conn->close();
-header('Location: thankYou.php');
+//header('Location: thankYou.php');
 
 /* $ch->exchange_declare($exchange, 'direct', true, true, false);
 $ch->queue_bind($queue, $exchange);
