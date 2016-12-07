@@ -1,6 +1,10 @@
  function validateEmail(email) {
-  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(email);
+  var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return reg.test(email);
+}
+ function validateMobileNum(mobileNum) {
+  var reg = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
+  return reg.test(mobileNum);
 }
 
 function validateForm()
@@ -41,7 +45,7 @@ function validateForm()
 			{
 			   document.getElementById('email_validation').innerHTML="";
 			}
-			if (phone==null || phone=="")
+			if (phone==null || phone=="" || !(validateMobileNum(phone)))
 			{
 			    document.getElementById('phone_validation').innerHTML="this is invalid mobile number";
                 return false;
@@ -50,7 +54,7 @@ function validateForm()
 			{
 			   document.getElementById('phone_validation').innerHTML="";
 			}
-			if (pass==null || pass=="")
+			if (pass==null || pass=="" || pass.length < 6)
 			{
 			    document.getElementById('pass_validation').innerHTML="this is invalid password";
                 return false;
@@ -59,7 +63,7 @@ function validateForm()
 			{
 			   document.getElementById('pass_validation').innerHTML="";
 			}
-			if (pass2==null || pass2=="")
+			if (pass2==null || pass2=="" pass2!= pass )
 			{
 			    document.getElementById('pass2_validation').innerHTML="this is invalid password";
                 return false;
