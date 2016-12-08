@@ -24,7 +24,7 @@
  1)First name not empty
  2)Birthdate not empty and format mm/dd/yyyy
  3)Email not empty and format example@example.com
- 4)Cellphone format xxx-xxx-xxxx or (xxx)xxx-xxx or xxxxxxxxxx
+ 4)Cellphone format xxx-xxx-xxxx or (xxx)xxx-xxx or xxxxxxxxxx or xxx.xxx.xxxx
  5)Password not empty and > 6 characters
  6)Password confirmation matches password 1
 
